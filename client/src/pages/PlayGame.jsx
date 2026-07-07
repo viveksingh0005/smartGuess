@@ -36,7 +36,8 @@ const PlayGame = () => {
         console.log(`📡 [STEP 1/2] Registering user in DB via HTTP...`);
 
         // 1. Force the HTTP join route first so Mongoose pushes the player to the array
-        const response = await fetch('http://localhost:5000/api/games/join', {
+       
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/games/join`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

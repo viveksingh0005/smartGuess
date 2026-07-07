@@ -4,10 +4,10 @@ import { useAuth } from './auth.context';
 const GameContext = createContext();
 
 // Initialize the socket outside or keep it single instance
-const socket = io('http://localhost:5000', {
+
+const socket = io(import.meta.env.VITE_API_URL, {
   withCredentials: true,
 });
-
 export const GameProvider = ({ children }) => {
   
   const [hintAnswer, setHintAnswer] = useState(null);

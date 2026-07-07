@@ -24,14 +24,17 @@ const CreateJoinRoom = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/games/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ userId: user._id }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/games/create`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ userId: user._id }),
+        }
+      );
 
       const data = await res.json();
 
@@ -110,8 +113,8 @@ const CreateJoinRoom = () => {
               </>
             ) : (
               <>
-                CREATE ROOM ⚡ 
-                
+                CREATE ROOM ⚡
+
               </>
             )}
           </button>
@@ -152,7 +155,7 @@ const CreateJoinRoom = () => {
               className="w-full py-3 sm:py-6 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white text-small sm:text-2xl font-medium sm:font-bold rounded-2xl sm:rounded-3xl transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-blue-500/40 hover:shadow-cyan-500/50 flex items-center justify-center gap-3"
             >
               JOIN BATTLE ⚔️
-            
+
             </button>
           </div>
 
