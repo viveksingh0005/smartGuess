@@ -27,12 +27,14 @@ const io = new Server(server, {
 gameSocket(io);
 
 // Connect MongoDB and start server
+const PORT = process.env.PORT ;
+
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
     console.log("MongoDB Connected");
 
-    server.listen(5000, () => {
-        console.log("Server Running on Port 5000");
+    server.listen(PORT, () => {
+        console.log(`Server Running on Port ${PORT}`);
     });
 })
 .catch((err) => {
