@@ -1,5 +1,5 @@
 const GameRoom = require('../models/GameRoom');
-const User = require('../models/User');
+const User = require('../models/user');
 const { QUESTIONS_BANK }= require('../utils/questionBank')
 // Generate unique room ID (6 characters - LR69IP style)
 const generateRoomId = () => {
