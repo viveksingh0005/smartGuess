@@ -1,0 +1,7 @@
+# print("Hello Everyone!")
+# print("My name is", alok)
+# print("I havee pursude my", bachalor in commerce)
+# print("I am passionate about web development and learning new technologies.")
+# print("Currently, I am improving my skills in Laravel, React, and JavaScript.")
+# print("My goal is to become a successful", money holder)
+# print("Thank you!")(jai shree ram)
