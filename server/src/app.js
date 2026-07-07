@@ -7,7 +7,8 @@ const contactRoutes=require("./routes/contact")
 const app=express();
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173",
+    "https://smart-guess.vercel.app"],
     credentials: true
 }));
 app.use(express.json());
